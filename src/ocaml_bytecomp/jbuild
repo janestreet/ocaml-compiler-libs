@@ -9,7 +9,7 @@
  ((targets (ocaml_bytecomp.ml))
   (deps    (../gen/gen.exe))
   (action  (run ${<}
-            -archive ${ocaml_where}/compiler-libs/ocamlbytecomp.cma
+            -ocaml-where ${ocaml_where} ocamlbytecomp
             -o ${@}))))
 
 (jbuild_version 1)
